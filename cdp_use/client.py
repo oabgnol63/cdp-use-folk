@@ -271,6 +271,8 @@ class CDPClient:
         )
         connect_kwargs = {
             "max_size": self.max_ws_frame_size,
+            "ping_interval": 1800,
+            "ping_timeout": None,
         }
         if self.additional_headers:
             connect_kwargs["additional_headers"] = self.additional_headers
